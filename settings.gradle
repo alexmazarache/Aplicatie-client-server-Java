@@ -1,0 +1,13 @@
+rootProject.name = 'lab5_mpp'
+include 'Models'
+include 'Persistance'
+include 'ServerServices'
+include 'Serveer'
+include 'Service'
+include 'Server'
+include 'Networking'
+include 'ServerServices'
+include 'Networking'
+include 'Server'
+include 'AppClient'
+

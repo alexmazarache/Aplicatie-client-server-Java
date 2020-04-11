@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <util:properties id="jdbcProps">
+        <prop key="Moto.jdbc.driver">
+            org.sqlite.JDBC</prop>
+        <prop key="Moto.jdbc.url">
+            jdbc:sqlite:C:\Users\alex_\IdeaProjects\lab5_mpp\Moto.db</prop>
+    </util:properties>
+    <util:properties id="jdbcProps" location="classpath:bd.config"/>
+
+    <bean id="repoAngajati" class="Repository.Repo.AngajatRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="repoCursa" class="Repository.Repo.CursaRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="repoEchipa" class="Repository.Repo.EchipaRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="repoParticipant" class="Repository.Repo.ParticipantRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="repoInscriere" class="Repository.Repo.InscriereRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+
+
+</beans>

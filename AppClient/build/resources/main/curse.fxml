@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GUI.HomeController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Curse disponibile">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="cursaTable" layoutX="192.0" prefHeight="206.0" prefWidth="410.0">
+                           <columns>
+                              <TableColumn fx:id="numeCursa" maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Nume" />
+                              <TableColumn fx:id="cmcCursa" maxWidth="5000.0" minWidth="10.0" prefWidth="125.0" text="Capacitate(cmc)" />
+                              <TableColumn fx:id="nrCursa" maxWidth="5000.0" minWidth="10.0" prefWidth="144.0" text="Numar participanti" />
+                           </columns>
+                        </TableView>
+                        <ImageView fitHeight="201.0" fitWidth="254.0" layoutX="-62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/MotoGP-Calendar-820x431.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutY="134.0" minHeight="36.0" minWidth="110.0" mnemonicParsing="false" onAction="#logOutHandler" prefHeight="72.0" prefWidth="191.0" text="Logout">
+                           <effect>
+                              <ColorAdjust />
+                           </effect>
+                           <graphic>
+                              <ImageView fitHeight="29.9998779296875" fitWidth="29.9998779296875" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/unnamed.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Cautare participanti">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="participantTable" layoutX="190.0" prefHeight="211.0" prefWidth="412.0">
+                           <columns>
+                              <TableColumn fx:id="numeParticipant" maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Nume" />
+                              <TableColumn fx:id="cmcParticipant" maxWidth="5000.0" minWidth="10.0" prefWidth="125.0" text="Capacitate(cmc)" />
+                              <TableColumn fx:id="echipa" prefWidth="75.0" text="Echipa" />
+                           </columns>
+                        </TableView>
+                        <ComboBox fx:id="comboParticipant" layoutX="436.0" layoutY="217.0" prefWidth="150.0" />
+                        <Button layoutX="482.0" layoutY="263.0" mnemonicParsing="false" onAction="#cautareHandler" text="Cauta" />
+                        <Text layoutX="306.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecteaza echipa:" />
+                        <TextField fx:id="numePart" layoutX="95.0" layoutY="217.0" prefHeight="31.0" prefWidth="149.0" />
+                        <Text layoutX="14.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Participant" />
+                        <Text layoutX="13.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capacitate" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Capacitate" />
+                        <Text layoutX="27.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Echipa" />
+                        <ComboBox fx:id="comboCapacitate" layoutX="94.0" layoutY="324.0" prefHeight="29.0" prefWidth="150.0" />
+                        <Button layoutX="313.0" layoutY="311.0" mnemonicParsing="false" onAction="#inscriereHandler" text="Inscriere" />
+                        <Text layoutX="3.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nume Cursa" />
+                        <ComboBox fx:id="echipaComboinput" layoutX="94.0" layoutY="251.0" prefWidth="150.0" />
+                        <ComboBox fx:id="numeCursaInput" layoutX="94.0" layoutY="287.0" prefWidth="150.0" />
+                        <Button layoutX="-1.0" layoutY="134.0" minHeight="36.0" minWidth="110.0" mnemonicParsing="false" onAction="#logOutHandler" prefHeight="80.0" prefWidth="191.0" text="Logout">
+                           <effect>
+                              <ColorAdjust />
+                           </effect>
+                           <graphic>
+                              <ImageView fitHeight="29.9998779296875" fitWidth="29.9998779296875" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/unnamed.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ImageView fitHeight="201.0" fitWidth="254.0" layoutX="-64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/MotoGP-Calendar-820x431.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
